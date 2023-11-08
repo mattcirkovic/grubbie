@@ -9,6 +9,32 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Grubbie'),
       ),
+      body: Container(
+        color: Colors.amber,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              color: Colors.brown,
+              child: SizedBox(
+                height: 100.0,
+              ),
+            ),
+            Container(
+              color: Colors.red,
+              child: SizedBox(
+                height: 100.0,
+              ),
+            ),
+            Container(
+              color: Colors.orange,
+              child: SizedBox(
+                height: 100.0,
+              ),
+            ),
+          ],
+        ),
+      )
     );
   }
 }
