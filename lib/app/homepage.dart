@@ -6,11 +6,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Grubbie'),
-      ),
+      backgroundColor: Colors.deepOrange,
       body: _buildContent(),
-      backgroundColor: Colors.grey[100],
     );
   }
 
@@ -22,18 +19,29 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Text(
-            'Sign In',
+            'Welcome',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 32.0,
               fontWeight: FontWeight.w600,
-              color: Colors.black54,
+              color: Colors.white,
               ),
             ),
           const SizedBox(height: 8.0),
           ElevatedButton( 
-            onPressed: () {print('Button pressed');}, 
-            child: const Text('Sign in with e-mail'),
+            onPressed: () {print('Button pressed');},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.grey[100],
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(12.0)),
+              )
+            ),
+            child: const Text(
+              'Sign in with e-mail',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              color: Colors.deepOrange,
+              ),)
             ),
         ],
       ),
