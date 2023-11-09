@@ -9,38 +9,32 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Grubbie'),
       ),
-      body: _buildContent()
+      body: _buildContent(),
+      backgroundColor: Colors.grey[100],
     );
   }
 
   Widget _buildContent() {
     return Padding(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(32.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
+          const Text(
             'Sign In',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 32.0,
               fontWeight: FontWeight.w600,
+              color: Colors.black54,
+              ),
             ),
+          const SizedBox(height: 8.0),
+          ElevatedButton( 
+            onPressed: () {print('Button pressed');}, 
+            child: const Text('Sign in with e-mail'),
             ),
-            SizedBox(height: 8.0,),
-          Container(
-            color: Colors.red,
-            child: SizedBox(
-              height: 100.0,
-            ),
-          ),
-          Container(
-            color: Colors.orange,
-            child: SizedBox(
-              height: 100.0,
-            ),
-          ),
         ],
       ),
     );
