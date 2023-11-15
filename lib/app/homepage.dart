@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grubbie/app/custom_widgets/sign_in_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,13 +13,13 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _buildContent() {
-    return Padding(
-      padding: const EdgeInsets.all(32.0),
+    return const Padding(
+      padding: EdgeInsets.all(32.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Text(
+          Text(
             'Welcome',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -27,23 +28,9 @@ class HomePage extends StatelessWidget {
               color: Colors.white,
               ),
             ),
-          const SizedBox(height: 8.0),
-          ElevatedButton( 
-            onPressed: () {print('Button pressed');},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.grey[100],
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(12.0)),
-              )
-            ),
-            child: const Text(
-              'Sign in with e-mail',
-            style: TextStyle(
-              fontWeight: FontWeight.w600,
-              color: Colors.deepOrange,
-              ),)
-            ),
-        ],
+          SizedBox(height: 8.0),
+          SignInButton(),
+          ],
       ),
     );
   }
