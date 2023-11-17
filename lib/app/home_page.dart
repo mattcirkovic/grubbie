@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   MenuChoice _selectedMenuChoice = MenuChoice.home;
+  String _appBarTitle = 'Home';
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +25,10 @@ class _HomePageState extends State<HomePage> {
   _buildContent() {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: Text(_appBarTitle),
       ),
       drawer: Drawer(
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.white,
         width: 200.0,
         child: Center(
           child: ListView(
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.zero, 
             children: [
               ListTile(
+                
                 leading: const Icon(Icons.home),
                 title: const Text('Home'),
                 selected: _selectedMenuChoice == MenuChoice.home,
@@ -71,6 +73,15 @@ class _HomePageState extends State<HomePage> {
   void _onItemTapped(MenuChoice choice) {
     setState(() {
       _selectedMenuChoice = choice;
+      switch (choice) {
+        case MenuChoice.home:
+          _appBarTitle = 'Home';
+        case MenuChoice.recipes:
+          _appBarTitle = 'Recipes';
+        case MenuChoice.shoppinglist:
+          _appBarTitle = 'Shopping List';
+        break;
+      }
     });
   }
 }
