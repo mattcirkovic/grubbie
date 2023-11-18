@@ -13,6 +13,7 @@ class _HomePageState extends State<HomePage> {
 
   MenuChoice _selectedMenuChoice = MenuChoice.home;
   String _appBarTitle = 'Home';
+  //Widget _homeScreenWidget = TODO
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,6 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.zero, 
             children: [
               ListTile(
-                
                 leading: const Icon(Icons.home),
                 title: const Text('Home'),
                 selected: _selectedMenuChoice == MenuChoice.home,
