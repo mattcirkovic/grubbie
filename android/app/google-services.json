@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "408611194200",
+    "project_id": "grubbie-101b5",
+    "storage_bucket": "grubbie-101b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408611194200:android:43cf583763f2167420512d",
+        "android_client_info": {
+          "package_name": "com.example.grubbie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq1N1DAuf1Ki59NMffyTK7WvNunqx3lHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
