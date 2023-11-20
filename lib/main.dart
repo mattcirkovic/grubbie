@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:grubbie/app/landing_page.dart';
+import 'package:grubbie/services/auth.dart';
 import 'firebase_options.dart';
 //import 'package:grubbie/app/sign_in_page.dart';
 
@@ -25,7 +26,7 @@ class Grubbie extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: const LandingPage(),
+      home: LandingPage(auth: Auth(),),
     );
   }
 }

@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:grubbie/services/auth.dart';
 
 enum MenuChoice {home, recipes, shoppinglist}
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({super.key, required this.auth, required this.onSignOut});
+
+  final AuthBase auth;
+  final VoidCallback onSignOut;
+
+  Future<void> _signOut() async {
+    try {
+      await auth.signOut();
+      onSignOut();
+    } catch(e) {
+      print(e.toString());
+    }
+  }
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -13,7 +26,6 @@ class _HomePageState extends State<HomePage> {
 
   MenuChoice _selectedMenuChoice = MenuChoice.home;
   String _appBarTitle = 'Home';
-  //Widget _homeScreenWidget = TODO
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +39,15 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_appBarTitle),
+        actions: [
+          OutlinedButton(
+            onPressed: widget._signOut,
+            style: TextButton.styleFrom(
+              iconColor: Colors.white
+            ),
+            child: const Icon(Icons.logout)
+          )
+        ],
       ),
       drawer: Drawer(
         backgroundColor: Colors.white,

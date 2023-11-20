@@ -1,11 +1,24 @@
 // ignore_for_file: avoid_print
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:grubbie/app/custom_widgets/custom_button.dart';
-import 'package:grubbie/app/home_page.dart';
+import 'package:grubbie/services/auth.dart';
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+  const SignInPage({super.key, required this.auth, required this.onSignIn});
+
+  final AuthBase auth;
+  final void Function(User?) onSignIn;
+
+  Future<void> _signInAnonomously() async {
+    try {
+      final user = await auth.signInAnonomously();
+      onSignIn(user);
+    } catch(e) {
+      print(e.toString());
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +49,11 @@ class SignInPage extends StatelessWidget {
             label: 'Sign in with e-mail',
             color: Colors.white,
             fontColor: Colors.deepOrange,
-            onPressed: () {print('Button pressed');},
+            onPressed: _signInAnonomously,
             borderRadius: 8.0,
           ),
           TextButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => HomePage())
-              );
+            onPressed: () {print('Button pressed');
             },
             child: const Text(
               'Don\'t have an account?',
