@@ -1,9 +1,9 @@
-.main-content-box {
+.billboard-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    width: 50em;
     height: 40em;
+    background-color: #7ABA78;
 }
