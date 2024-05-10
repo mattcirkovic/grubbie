@@ -8,25 +8,33 @@
 
 .home-title-box {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
 
-    height: 40vh;
     z-index: 4;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .home-body-box {
+    height: 70vh;
+    width: 100vw;
 }
 
 .home-shape-box {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    height: fit-content;
+    padding-left: 30px;
 }
 
 .home-form-box {
-    position: relative;
     display: flex;
     justify-content: center;
+}
+
+.home-form {
+    width: 90%;
 }
