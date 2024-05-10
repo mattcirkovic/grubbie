@@ -9,35 +9,36 @@
 }
 
 .banana {
-    left: 5%;
+    left: 25%;
     z-index: 1;
     animation: fruitAnimation 2s;
     animation-timing-function: cubic-bezier(1, 0.05, .55, .5); 
 }
 
 .grapes {
+    left: 10%;
     z-index: 2;
-    left: 20%;
     animation: fruitAnimation 1.25s; 
     animation-timing-function: cubic-bezier(.8, 0.25, .55, .2); 
 }
 
 .orange {
+    right: 10%;
     z-index: 3;
-    right: 20%;
     animation: fruitAnimation 1.5s; 
     animation-timing-function: cubic-bezier(.5, 0.5, .25, .7); 
 }
 
 .pizza {
-    right: 5%;
+    right: 25%;
     animation: fruitAnimation 1.75s; 
     animation-timing-function: cubic-bezier(1, 0.5, .25, .7); 
 }
 
 .shape {
-    position: absolute;
-    width: 40%;
+    position: relative;
+    flex-basis: 50%;
+    width: 33%;
     object-fit:scale-down; 
     animation-direction: alternate;
     animation-iteration-count: infinite; 
