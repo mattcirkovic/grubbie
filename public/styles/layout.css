@@ -18,10 +18,11 @@
 }
 
 .home-body-box {
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .home-shape-box {
+    padding-left: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +35,14 @@
 }
 
 .home-form {
-    width: 90%;
+    width: 80%;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
 }
 
 @media (max-width: 767.98px) {

@@ -1,6 +1,6 @@
 .home-title {
     font-family: "Poetsen One", sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .home-text { 
@@ -42,6 +42,16 @@
     object-fit:scale-down; 
     animation-direction: alternate;
     animation-iteration-count: infinite; 
+}
+
+.btn-primary {
+    background-color: #B5C18E;
+    width: 40%;
+}
+
+.btn-secondary {
+    background-color: #B99470;
+    width: 40%;
 }
 
 @keyframes fruitAnimation{ 
