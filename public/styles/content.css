@@ -1,0 +1,49 @@
+.home-title {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 4rem;
+}
+
+.home-text { 
+    font-family: "Patrick Hand", cursive;
+    font-size: 2rem;
+}
+
+.banana {
+    z-index: 1;
+    left: 15%;
+    animation: fruitAnimation 2s;
+    animation-timing-function: cubic-bezier(1, 0.05, .55, .5); 
+}
+
+.grapes {
+    z-index: 2;
+    left: 25%;
+    animation: fruitAnimation 1.25s; 
+    animation-timing-function: cubic-bezier(.8, 0.25, .55, .2); 
+}
+
+.orange {
+    z-index: 3;
+    left: 35%;
+    animation: fruitAnimation 1.5s; 
+    animation-timing-function: cubic-bezier(.5, 0.5, .25, .7); 
+}
+
+.pizza {
+    left: 45%;
+    animation: fruitAnimation 1.75s; 
+    animation-timing-function: cubic-bezier(1, 0.5, .25, .7); 
+}
+
+.shape {
+    position: absolute;
+    width: 50%;
+    object-fit:scale-down; 
+    animation-direction: alternate;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes fruitAnimation{ 
+    from { transform: translate3d(0, -60px, 0);} 
+    to { transform: translate3d(0, 0px, 0);} 
+} 
