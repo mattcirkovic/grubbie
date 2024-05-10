@@ -1,7 +1,6 @@
 .home-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
     height: 100vh;
     background-color: #fff3e4;
@@ -9,19 +8,25 @@
 
 .home-title-box {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    height: 30vh;
+    height: 40vh;
+    z-index: 4;
 }
 
 .home-body-box {
-    height: 70vh;
 }
 
 .home-shape-box {
     position: relative;
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+.home-form-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
