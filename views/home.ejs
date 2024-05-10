@@ -14,39 +14,12 @@
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/content.css">
     </head>
+
+<%- include("partials/header.ejs") %>
+
     <body>
         <div class="home-box contianer-fluid">
-            <div class="home-title-box">
-                <h1 class="home-title">Grubbie</h1>
-                <p class="home-text">Don't waste food again</p>
-            </div>
-            <div class="home-body-box">
-                <div class="row container-fluid">
-                    <div class="home-shape-box col-sm-12 col-md-7">
-                        <img class="shape banana" src="assets/images/home/banana.svg" alt="banana">
-                        <img class="shape grapes" src="assets/images/home/grapes.svg" alt="grapes">
-                        <img class="shape orange" src="assets/images/home/orange.svg" alt="orange">
-                        <img class="shape pizza" src="assets/images/home/pizza.svg" alt="pizza">
-                    </div>
-                    <div class="home-form-box col-sm-12 col-md-5">
-                        <form class="home-form">
-                            <div class="form-group mb-3">
-                              <label for="exampleInputEmail1">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="someone@something.com">
-                            </div>
-                            <div class="form-group mb-3">
-                              <label for="exampleInputPassword1">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-buttons mb-3">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
-                                <p>or</p>
-                                <button type="submit" class="btn btn-secondary">Register</button>
-                            </div>
-                          </form>
-                    </div>
-                </div>
-            </div>
+
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
