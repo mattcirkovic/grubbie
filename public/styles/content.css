@@ -11,27 +11,27 @@
 .banana {
     left: 25%;
     z-index: 1;
-    animation: fruitAnimation 2s;
+    animation: fruitAnimation 4s;
     animation-timing-function: cubic-bezier(1, 0.05, .55, .5); 
 }
 
 .grapes {
     left: 10%;
     z-index: 2;
-    animation: fruitAnimation 1.25s; 
+    animation: fruitAnimation 2.5s; 
     animation-timing-function: cubic-bezier(.8, 0.25, .55, .2); 
 }
 
 .orange {
     right: 10%;
     z-index: 3;
-    animation: fruitAnimation 1.5s; 
+    animation: fruitAnimation 3s; 
     animation-timing-function: cubic-bezier(.5, 0.5, .25, .7); 
 }
 
 .pizza {
     right: 25%;
-    animation: fruitAnimation 1.75s; 
+    animation: fruitAnimation 3.25s; 
     animation-timing-function: cubic-bezier(1, 0.5, .25, .7); 
 }
 
