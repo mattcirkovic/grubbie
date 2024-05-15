@@ -1,11 +1,11 @@
-.home-box {
+.login-box {
     display: flex;
     flex-direction: column;
 
     background-color: #fff3e4;
 }
 
-.home-title-box {
+.login-title-box {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -15,25 +15,25 @@
     margin-top: 5%;
 }
 
-.home-body-box {
+.login-body-box {
     margin-top: 8%;
     margin-bottom: 8%;
 }
 
-.home-shape-box {
+.login-shape-box {
     padding-left: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.home-form-box {
+.login-form-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.home-form {
+.login-form {
     width: 80%;
 }
 
@@ -45,7 +45,7 @@
 }
 
 @media (max-width: 767.98px) {
-    .home-form-box {
+    .login-form-box {
         align-items: center;
     }
 }

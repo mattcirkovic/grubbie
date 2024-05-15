@@ -15,33 +15,33 @@
         <link rel="stylesheet" href="styles/content.css">
     </head>
     <body>
-        <div class="home-box contianer-fluid">
-            <div class="home-title-box">
-                <h1 class="home-title">Grubbie</h1>
-                <p class="home-text">Don't waste food again</p>
+        <div class="login-box contianer-fluid">
+            <div class="login-title-box">
+                <h1 class="login-title">Grubbie</h1>
+                <p class="login-text">Don't waste food again</p>
             </div>
-            <div class="home-body-box">
+            <div class="login-body-box">
                 <div class="row container-fluid">
-                    <div class="home-shape-box col-sm-12 col-md-7">
-                        <img class="shape banana" src="assets/images/home/banana.svg" alt="banana">
-                        <img class="shape grapes" src="assets/images/home/grapes.svg" alt="grapes">
-                        <img class="shape orange" src="assets/images/home/orange.svg" alt="orange">
-                        <img class="shape pizza" src="assets/images/home/pizza.svg" alt="pizza">
+                    <div class="login-shape-box col-sm-12 col-md-7">
+                        <img class="shape banana" src="assets/images/login/banana.svg" alt="banana">
+                        <img class="shape grapes" src="assets/images/login/grapes.svg" alt="grapes">
+                        <img class="shape orange" src="assets/images/login/orange.svg" alt="orange">
+                        <img class="shape pizza" src="assets/images/login/pizza.svg" alt="pizza">
                     </div>
-                    <div class="home-form-box col-sm-12 col-md-5">
-                        <form class="home-form">
+                    <div class="login-form-box col-sm-12 col-md-5">
+                        <form class="login-form" method="post" action="/login">
                             <div class="form-group mb-3">
-                              <label for="exampleInputEmail1">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="someone@something.com">
+                              <label for="emailInput">Email address</label>
+                              <input type="text" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="someone@something.com">
                             </div>
                             <div class="form-group mb-3">
-                              <label for="exampleInputPassword1">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                              <label for="passwordInput">Password</label>
+                              <input type="text" class="form-control" id="passwordInput" placeholder="Password">
                             </div>
                             <div class="form-buttons mb-3">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                <button type="submit" class="btn btn-primary" value="login">Login</button>
                                 <p>or</p>
-                                <button type="submit" class="btn btn-secondary">Register</button>
+                                <button type="submit" class="btn btn-secondary" value="register" formaction="/register">Register</button>
                             </div>
                           </form>
                     </div>
