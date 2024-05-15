@@ -1,8 +1,10 @@
+.grubbie-page {
+    background-color: #fff3e4;
+}
+
 .login-box {
     display: flex;
     flex-direction: column;
-
-    background-color: #fff3e4;
 }
 
 .login-title-box {

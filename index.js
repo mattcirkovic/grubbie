@@ -23,12 +23,12 @@ const db = new pg.Client({
 db.connect();
 
 db.query("SELECT * FROM recipes", (err, res) => {
-    if(err) {
+    if (err) {
         console.error("Error with query:", err.stack);
     } else {
         recipes = res.rows;
     }
-    db.end();
+    //db.end();
 });
 
 //Middlewares
@@ -48,7 +48,23 @@ app.get("/login", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-    console.log(req.body.email);
+
+    
+    db.query("SELECT * FROM users WHERE email = $1",[req.body.email], (err, qres) => {
+        if(err) {
+            console.error("Error with query:", err.stack);
+        } else {
+            if (qres.rowCount > 0) console.log("User already exists.");
+            else bcrypt.hash(req.body.password, 3, (err, hash) => {
+                db.query("INSERT INTO users(email, phash) VALUES ($1, $2)",[
+                    req.body.email,
+                    hash
+                ]);
+            })
+        }
+        //db.end();
+    });
+
     res.render("home.ejs", {recipes: recipes});
 });
 
