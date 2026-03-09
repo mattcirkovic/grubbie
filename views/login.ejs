@@ -20,28 +20,30 @@
                 <h1 class="login-title">Grubbie</h1>
                 <p class="login-text">Don't waste food again</p>
             </div>
-            <div class="login-body-box">
-                <div class="row container-fluid">
-                    <div class="login-shape-box col-sm-12 col-md-7">
-                        <img class="shape banana" src="assets/images/login/banana.svg" alt="banana">
-                        <img class="shape grapes" src="assets/images/login/grapes.svg" alt="grapes">
-                        <img class="shape orange" src="assets/images/login/orange.svg" alt="orange">
-                        <img class="shape pizza" src="assets/images/login/pizza.svg" alt="pizza">
-                    </div>
-                    <div class="login-form-box col-sm-12 col-md-5">
-                        <form method="post" action="/login">
-                            <div class="form-group mb-3">
-                                <label for="emailInput">E-Mail Address</label>
-                                <input type="email" name="email" id="emailInput" class="form-control" >
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="passwordInput">Password</label>
-                                <input type="password" name="password" id="passwordInput" class="form-control" >
-                            </div>
+            <div class="login-body-box row g-0">
+                <div class="login-shape-box col-xs-12 col-sm-7">
+                    <img class="shape banana" src="assets/images/login/banana.svg" alt="banana">
+                    <img class="shape grapes" src="assets/images/login/grapes.svg" alt="grapes">
+                    <img class="shape orange" src="assets/images/login/orange.svg" alt="orange">
+                    <img class="shape pizza" src="assets/images/login/pizza.svg" alt="pizza">
+                </div>
+                <div class="login-form-box col-xs-12 col-sm-3">
+                    <form method="post" action="/login">
+                        <div class="form-group mb-3">
+                            <label for="emailInput">E-Mail Address</label>
+                            <input type="email" name="email" id="emailInput" class="form-control" >
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="passwordInput">Password</label>
+                            <input type="password" name="password" id="passwordInput" class="form-control" >
+                        </div>
+                        <div class="form-buttons">
                             <input type="submit" class="btn btn-secondary" value="Login">
                             <input type="submit" class="btn btn-primary" value="Register" formaction="/register">
-                        </form>
-                    </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-form-box col-xs-12 col-sm-2">
                 </div>
             </div>
         </div>

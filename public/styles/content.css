@@ -9,30 +9,30 @@
 }
 
 .banana {
-    left: 25%;
+    left: 15%;
     z-index: 1;
-    animation: fruitAnimation 4s;
-    animation-timing-function: cubic-bezier(1, 0.05, .55, .5); 
+    animation: fruitAnimation 2.75s;
+    animation-timing-function: ease-in-out
 }
 
 .grapes {
-    left: 10%;
+    left: 7.5%;
     z-index: 2;
-    animation: fruitAnimation 2.5s; 
-    animation-timing-function: cubic-bezier(.8, 0.25, .55, .2); 
+    animation: fruitAnimation 2s; 
+    animation-timing-function: ease-in-out; 
 }
 
 .orange {
-    right: 10%;
+    right: 7.5%;
     z-index: 3;
-    animation: fruitAnimation 3s; 
-    animation-timing-function: cubic-bezier(.5, 0.5, .25, .7); 
+    animation: fruitAnimation 2.5s; 
+    animation-timing-function: ease-in-out; 
 }
 
 .pizza {
-    right: 25%;
-    animation: fruitAnimation 3.25s; 
-    animation-timing-function: cubic-bezier(1, 0.5, .25, .7); 
+    right: 15%;
+    animation: fruitAnimation 2.25s; 
+    animation-timing-function: ease-in-out; 
 }
 
 .shape {
@@ -55,6 +55,6 @@
 }
 
 @keyframes fruitAnimation{ 
-    from { transform: translate3d(0, -60px, 0);} 
     to { transform: translate3d(0, 0px, 0);} 
+    from { transform: translate3d(0, -40px, 0);}
 }

@@ -1,34 +1,33 @@
-import { name } from "ejs";
 import express from "express";
 import pg from "pg";
 import bodyParser from "body-parser";
 import bcrypt from "bcrypt";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const port = 3000;
 
-let recipes = {
-    name: "name",
-    servings: -1,
-};
+var recipes = [];
 
 const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "grubbie_db",
-    password: "AlexBarry1",
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
     port: 5432,
 });
 
 db.connect();
 
-db.query("SELECT * FROM recipes", (err, res) => {
+db.query("SELECT * FROM public.recipes", (err, res) => {
     if (err) {
         console.error("Error with query:", err.stack);
     } else {
         recipes = res.rows;
     }
-    //db.end();
+    db.end();
 });
 
 //Middlewares
@@ -48,8 +47,6 @@ app.get("/login", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-
-    
     db.query("SELECT * FROM users WHERE email = $1",[req.body.email], (err, qres) => {
         if(err) {
             console.error("Error with query:", err.stack);
