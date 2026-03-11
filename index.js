@@ -1,15 +1,13 @@
 import express from "express";
-import pg from "pg";
 import bodyParser from "body-parser";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
+import pg from "pg";
 
 dotenv.config();
 
 const app = express();
 const port = 3000;
-
-var recipes = [];
 
 const db = new pg.Client({
     user: process.env.DB_USER,
@@ -21,25 +19,31 @@ const db = new pg.Client({
 
 db.connect();
 
-db.query("SELECT * FROM public.recipes", (err, res) => {
-    if (err) {
-        console.error("Error with query:", err.stack);
-    } else {
-        recipes = res.rows;
-    }
-    db.end();
-});
-
 //Middlewares
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    res.render("home.ejs", {recipes: recipes});
+    db.query("SELECT * FROM public.food_items", (err, results) => {
+        if (err) {
+            console.error("Error with query:", err.stack);
+        } else {
+            res.render("home.ejs", {food_items: results.rows});
+        }
+        db.end();
+    });
 });
 
 app.get("/home", (req, res) => {
-    res.render("home.ejs", {recipes: recipes});
+    db.query("SELECT * FROM public.food_items", (err, results) => {
+        if (err) {
+        console.error("Error with query:", err.stack);
+        } else {
+            food_items = results.rows;
+        }
+        db.end();
+    });
+    res.render("home.ejs", {food_items: food_items});
 });
 
 app.get("/login", (req, res) => {
